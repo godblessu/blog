@@ -25,9 +25,9 @@
 				          <div id="navbar" class="navbar-collapse collapse">
 				            <ul class="nav navbar-nav">
 				              <li class="active"><a href="#">首页</a></li>
-				              <li><a href="#"></a>发现</li>
-				              <li><a href="#">Contact</a>热门</li>
-				              <li><a href="#">Contact</a>原创</li>
+				              <li><a href="#">发现</a></li>
+				              <li><a href="#">热门</a></li>
+				              <li><a href="#">原创</a></li>
 				              <li class="dropdown">
 				                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">分类 <span class="caret"></span></a>
 				                <ul class="dropdown-menu">
@@ -48,11 +48,15 @@
 						      </form>
 				            </ul>
 				            <ul class="nav navbar-nav navbar-right">
-				              <li class="active"><a href="./">@yield('my','我') <span class="sr-only">(current)</span></a></li>
-				              <li><a href="../navbar-static-top/">我的主页</a></li>
-				              <li><a href="../navbar-fixed-top/">私信</a></li>
-				              <li><a href="../navbar-fixed-top/">设置</a></li>
-				              <li><a href="../navbar-fixed-top/">退出</a></li>
+				              <li class="dropdown">
+				              	  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@yield('my','我')<span class="caret"></span></a>
+					              <ul class="dropdown-menu">
+						              <li><a href="../navbar-static-top/">我的主页</a></li>
+						              <li><a href="../navbar-fixed-top/">私信</a></li>
+						              <li><a href="../navbar-fixed-top/">设置</a></li>
+						              <li><a href="../navbar-fixed-top/">退出</a></li>
+					              </ul>
+					          </li>
 				            </ul>
 				          </div><!--/.nav-collapse -->
 				        </div><!--/.container-fluid -->
@@ -65,14 +69,18 @@
         <div class="container">
             @yield('content')
         </div>
-        <script src="js/sea.js"></script>
+        
+        <script src="/libs/js/seajs/sea.js"></script>
+
         <script>
 	        seajs.config({
 	            base: "/libs/",
 	            alias: {
-	              "jquery": "js/jquery/1.10.1/jquery.js"
+	              "jquery": "js/jquery/jquery.js",
+	              "bootstrap": "js/bootstrap/bootstrap.min.js"
 	            }
 	        });
+	        seajs.use("/libs/src/common.js");
         </script>
 	</body>
 </html>
