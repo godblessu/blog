@@ -1,5 +1,6 @@
 <?php
 
+use ClassPreloader\Config;
 /**
  * Laravel - A PHP Framework For Web Artisans
  *

@@ -1,9 +1,9 @@
-@extends('layouts.header')
+@extends('layouts.main')
 
 @section('title', '登录')
 
 @section('sidebar')
-    @@parent
+    @parent
 
     <p>This is appended to the master sidebar.</p>
 @endsection
