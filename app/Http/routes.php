@@ -10,10 +10,9 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-// Route::get('login','UserController');
+Route::get('/',['middleware' => 'auth', 'Auth\AuthController@getLogin']);
 
 // Authentication routes...
-// Route::get('/','testController@index');
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');

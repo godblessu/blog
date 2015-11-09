@@ -4,13 +4,14 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>@yield('title')</title>
-		<link href="/libs/css/bootstrap.css" rel="stylesheet" />
+		<link href="/libs/css/bootstrap.css" rel="stylesheet" />		
+		<link href="/libs/css/flat-ui.min.css" rel="stylesheet" />
 	</head>
 	<body>
 		@section('sidebar')
             <!-- 通用header -->
 			<div id="header">
-				<div class="container">
+				<div id="nav1" class="container">
 					<nav class="navbar navbar-default">
 				        <div class="container-fluid">
 				          <div class="navbar-header">
@@ -24,10 +25,10 @@
 				          </div>
 				          <div id="navbar" class="navbar-collapse collapse">
 				            <ul class="nav navbar-nav">
-				              <li class="active"><a href="#">首页</a></li>
-				              <li><a href="#">发现</a></li>
+ 				              <li class="active"><a href="#">首页</a></li>
+				              <!--<li><a href="#">发现</a></li>
 				              <li><a href="#">热门</a></li>
-				              <li><a href="#">原创</a></li>
+				              <li><a href="#">原创</a></li> -->
 				              <li class="dropdown">
 				                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">分类 <span class="caret"></span></a>
 				                <ul class="dropdown-menu">
@@ -77,10 +78,10 @@
 	            base: "/libs/",
 	            alias: {
 	              "jquery": "js/jquery/jquery.js",
-	              "bootstrap": "js/bootstrap/bootstrap.min.js"
+	              "bootstrap": "js/bootstrap/flat-ui.min.js"
 	            }
 	        });
-	        seajs.use("/libs/src/common.js");
+	        seajs.use("src/common");
         </script>
 	</body>
 </html>
